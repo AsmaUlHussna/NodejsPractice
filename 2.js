@@ -51,14 +51,14 @@ while (1) {
 
   switch (choose) {
     case "2":
-      const search = prompt("Enter Hotel Name or Description:");
+      const searchme = prompt("Enter Hotel Name or Description:");
 
       hotels.forEach((el) => {
-        
-        if (el.name.includes(search)) {
+        //console.log(el.name);
+        if (el.name.includes(searchme)) {
           console.log(el);
         }
-        if (el.description.includes(search)) {
+        if (el.description.includes(searchme)) {
           console.log(el);
         }
       });
@@ -69,7 +69,7 @@ while (1) {
       const search_review = prompt("Enter Hotel Name for Review:");
       let i = 0;
       hotels.forEach((el) => {
-        
+        //console.log(el.name);
         if (el.name.includes(search_review)) {
           const review_score = prompt(
             `Enter Review for hotel Name ${el.name} :`
@@ -91,12 +91,12 @@ while (1) {
       });
       console.log(hotels);
 
-    
+      // options();
       break;
 
     case "5":
       const option_nested =
-       "1.FILTER by Location  2.FILTER by Max Price 3.FILTER by Min Review";
+        "1.FILTER by Location  2.FILTER by Max Price 3.FILTER by Min Review";
       console.log(option_nested);
       const choose_nested = prompt("Your Choice: ");
       if (choose_nested == 1) {
